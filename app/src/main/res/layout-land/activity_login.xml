@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#20B100"
     tools:context=".LoginActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="30dp">
 
     <EditText
-        android:id="@+id/etLogin"
+        android:id="@+id/etLoginLog"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -21,10 +22,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imvLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/imvLogoLog" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnLoginLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -32,20 +33,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pwdLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/pwdLoginLog" />
 
     <Button
-        android:id="@+id/btnRegistro"
+        android:id="@+id/btnRegistrarLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/register_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginLog" />
 
     <ImageView
-        android:id="@+id/imvLogo"
+        android:id="@+id/imvLogoLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -55,7 +56,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
-        android:id="@+id/pwdLogin"
+        android:id="@+id/pwdLoginLog"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -66,6 +67,6 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/etLoginLog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

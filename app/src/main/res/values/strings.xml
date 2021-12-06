@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">ResolVApp</string>
-    <string name="login_name">Digite seu nome</string>
+    <string name="login_name">Digite seu apelido ou e-mail</string>
     <string name="login_password">Digite sua senha</string>
     <string name ="login_button"> Entrar</string>
     <string name ="register_button"> Registrar</string>
+    <string name="register_email">Digite seu e-mail</string>
+    <string name="register_apelido">Digite seu apelido</string>
+    <string name="register_nome">Digite seu nome</string>
+    <string name="register_senha">Digite sua senha</string>
+    <string name ="login_button_reg"> Voltar</string>
 </resources>
