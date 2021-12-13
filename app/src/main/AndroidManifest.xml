@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ResolVApp">
         <activity
+            android:name=".FazerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EscolherActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegistroActvity"
             android:exported="false" />
         <activity
