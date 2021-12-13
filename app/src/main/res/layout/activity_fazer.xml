@@ -4,6 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray0"
     tools:context=".FazerActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Titulo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEnunciado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Enunciado kahsbdlka shdljashgdlja sghdjhlga sdljh sgahld gasghk dgjhasfkdghg ahd gha sgdjhlsga d ga hdgjhlsa gdjh gahd gah gdh aghdgagdjha gdgjhla gsdjhl gahd gashdjha ghdsa"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/rgAlternativas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" sj hdfçkjashf jksa hçfjkhsaçfkj  sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh sj hdfçkjashf jksa hçfjkhsaçfkj hsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkhhsjka fhçjks fhdçjka shfçjkshadfjkhsajkfd hhsjka fhdjsa hfj shdaç gjkhaçsjk ghçjkdf ghçjkdhfgç jkhdg sdçjkg hdsjk ghç jke ghjkh" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabProxima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_next_plan_24"
+        app:backgroundTint="@color/gray2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
