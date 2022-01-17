@@ -1,5 +1,6 @@
 package com.example.resolvapp;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,14 @@ public class MyAdapter extends RecyclerView.Adapter {
         TextView tvTitle = v.findViewById(R.id.tvMateria);
         tvTitle.setText(myItem.title);
 
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), FazerActivity.class);
+                i.putExtra("a", true);
+                v.getContext().startActivity(i);
+            }
+        });
     }
 
     @Override

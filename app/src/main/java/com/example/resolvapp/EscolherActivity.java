@@ -25,8 +25,8 @@ public class EscolherActivity extends AppCompatActivity {
 
         List<Materia> itens = new ArrayList<>();
 
-        int[] nums = {R.drawable.ic_baseline_calculate_24,R.drawable.ic_baseline_science_24};
-        String[] titles = {"Matemática","Química"};
+        int[] nums = {R.drawable.ic_baseline_calculate_24,R.drawable.ic_baseline_science_24,R.drawable.ic_baseline_menu_book_24,R.drawable.ic_baseline_biotech_24, R.drawable.ic_baseline_church_24};
+        String[] titles = {"Matemática","Química","Português","Biologia", "Teologia"};
 
         for (int i=0; i<nums.length;i++){
             Materia mat = new Materia();
@@ -49,5 +49,7 @@ public class EscolherActivity extends AppCompatActivity {
         //Adicionando divisor entre itens.
         DividerItemDecoration divider = new DividerItemDecoration(rvMaterias.getContext(), DividerItemDecoration.VERTICAL);
         rvMaterias.addItemDecoration(divider);
+
+
     }
 }
