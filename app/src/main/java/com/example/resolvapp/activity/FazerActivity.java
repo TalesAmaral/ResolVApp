@@ -30,7 +30,7 @@ import java.util.concurrent.Executors;
 public class FazerActivity extends AppCompatActivity {
 
     String altCorreta;
-
+    String idQuestao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +68,7 @@ public class FazerActivity extends AppCompatActivity {
                         String titulo = "("+questao.getString("vestibular")+" - "+questao.getString("ano")+") ";
                         JSONArray alternativas = questao.getJSONArray("alternativas");
                         String solucao =  questao.getString("solucao");
+                        idQuestao = questao.getString("id");
 
                         altCorreta = questao.getString("altCorreta");
                         runOnUiThread(new Runnable() {
@@ -118,6 +119,40 @@ public class FazerActivity extends AppCompatActivity {
                             RadioButton botaoErrado = findViewById(idMarcada);
                             botaoErrado.setBackgroundColor(getResources().getColor(R.color.red));
                         }
+                        final String acertou = (idCorreta == idMarcada) ? "1" : "0";
+                        ExecutorService executorService = Executors.newSingleThreadExecutor();
+                        executorService.execute(new Runnable() {
+                            @Override
+                            public void run() {
+                                HttpRequest httpRequest = new HttpRequest(Config.RESOLV_APP_URl+"post_questao.php","POST", "UTF-8");
+                                //colocando parametro
+
+                                String x = idQuestao;
+                                String y = Config.getId(FazerActivity.this);
+                                httpRequest.addParam("idQuestao",idQuestao);
+                                httpRequest.addParam("idUsuario",Config.getId(FazerActivity.this));
+                                httpRequest.addParam("acertou",  acertou );
+                                try {
+                                    InputStream inputStream = httpRequest.execute();
+                                    String result = Util.inputStream2String(inputStream, "UTF-8");
+                                    httpRequest.finish();
+
+                                    Log.d("HTTP_REQUEST_RESULT",result);
+
+                                    JSONObject jsonObject = new JSONObject(result);
+                                    int success = jsonObject.getInt("success");
+                                    //vendo se deu certo
+                                    if (success != 1){
+                                        Log.w("erro", "insert deu errado");
+
+                                    }
+
+                                } catch (IOException | JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                        });
 
                     } else{
                         Intent i = getIntent();
