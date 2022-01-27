@@ -1,4 +1,4 @@
-package com.example.resolvapp;
+package com.example.resolvapp.adapter;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -9,6 +9,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.resolvapp.R;
+import com.example.resolvapp.activity.EscolherActivity;
+import com.example.resolvapp.activity.FazerActivity;
+import com.example.resolvapp.model.Materia;
 
 import java.util.List;
 
@@ -46,7 +51,7 @@ public class MyAdapter extends RecyclerView.Adapter {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), FazerActivity.class);
-                i.putExtra("a", true);
+                i.putExtra("idMateria", ""+myItem.id);
                 v.getContext().startActivity(i);
             }
         });

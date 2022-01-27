@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray0"
-    tools:context=".RegistroActvity">
+    tools:context=".activity.RegistroActvity">
 
     <ImageView
         android:id="@+id/imvLogoReg"
@@ -63,21 +63,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNomeReg" />
 
-    <EditText
-        android:id="@+id/etSenhaReg"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/register_senha"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etApelidoReg" />
-
     <Button
         android:id="@+id/btnRegistrarReg"
         android:layout_width="120dp"
@@ -86,7 +71,7 @@
         android:text="@string/register_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSenhaReg" />
+        app:layout_constraintTop_toBottomOf="@+id/etSenha" />
 
     <Button
         android:id="@+id/btnVoltarReg"
@@ -97,4 +82,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegistrarReg" />
+
+    <EditText
+        android:id="@+id/etSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Digite sua senha"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etApelidoReg" />
 </androidx.constraintlayout.widget.ConstraintLayout>

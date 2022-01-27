@@ -1,12 +1,15 @@
-package com.example.resolvapp;
+package com.example.resolvapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import com.example.resolvapp.model.Materia;
+import com.example.resolvapp.adapter.MyAdapter;
+import com.example.resolvapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,13 +28,14 @@ public class EscolherActivity extends AppCompatActivity {
 
         List<Materia> itens = new ArrayList<>();
 
-        int[] nums = {R.drawable.ic_baseline_calculate_24,R.drawable.ic_baseline_science_24,R.drawable.ic_baseline_menu_book_24,R.drawable.ic_baseline_biotech_24, R.drawable.ic_baseline_church_24};
-        String[] titles = {"Matemática","Química","Português","Biologia", "Teologia"};
+        int[] nums = {R.drawable.outline_calculate_24,R.drawable.outline_precision_manufacturing_24, R.drawable.outline_menu_book_24, R.drawable.outline_science_24, R.drawable.outline_biotech_24, R.drawable.outline_psychology_24 };
+        String[] titles = {"Matemática","Física", "Português","Química","Biologia", "Filosofia"};
 
         for (int i=0; i<nums.length;i++){
             Materia mat = new Materia();
             mat.icon = nums[i];
             mat.title = titles[i];
+            mat.id = i+1;
             itens.add(mat);
         }
         // Criando o adaptador

@@ -1,4 +1,4 @@
-package com.example.resolvapp;
+package com.example.resolvapp.adapter;
 
 import android.view.View;
 

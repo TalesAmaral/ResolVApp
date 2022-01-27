@@ -12,4 +12,6 @@
     <color name="gray2">#bdbdbd </color>
     <color name="gray3">#757575</color>
     <color name="gray4">#212121 </color>
+    <color name = "green" > #90ee90</color>
+    <color name = "red" > #FF7F7F</color>
 </resources>
