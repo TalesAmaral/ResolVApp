@@ -1,11 +1,17 @@
 package com.example.resolvapp.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.example.resolvapp.model.Materia;
 import com.example.resolvapp.adapter.MyAdapter;
@@ -24,6 +30,8 @@ public class EscolherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_escolher);
 
 
+        Toolbar tbEscolher = findViewById(R.id.tbEscolher);
+        setSupportActionBar(tbEscolher);
 
 
         List<Materia> itens = new ArrayList<>();
@@ -55,5 +63,25 @@ public class EscolherActivity extends AppCompatActivity {
         rvMaterias.addItemDecoration(divider);
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu_perfil,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.opPerfil:
+                Intent i = new Intent(EscolherActivity.this, PerfilActivity.class);
+                startActivity(i);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

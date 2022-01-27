@@ -1,6 +1,7 @@
 package com.example.resolvapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -32,7 +33,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button telaRegistro=findViewById(R.id.btnRegistrarLog);
+        Button telaRegistro =findViewById(R.id.btnRegistrarLog);
+        Toolbar tbLogin = findViewById(R.id.tbLogin);
+        setSupportActionBar(tbLogin);
+
         telaRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

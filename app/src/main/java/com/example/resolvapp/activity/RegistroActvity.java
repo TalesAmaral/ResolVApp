@@ -1,6 +1,7 @@
 package com.example.resolvapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,6 +30,9 @@ public class RegistroActvity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_actvity);
+
+        Toolbar tbRegistro = findViewById(R.id.tbRegistro);
+        setSupportActionBar(tbRegistro);
 
         Button telaLogin=findViewById(R.id.btnVoltarReg);
         telaLogin.setOnClickListener(new View.OnClickListener() {

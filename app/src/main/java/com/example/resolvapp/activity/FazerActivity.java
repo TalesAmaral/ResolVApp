@@ -1,9 +1,11 @@
 package com.example.resolvapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -35,6 +37,9 @@ public class FazerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fazer);
+
+        Toolbar tbFazer = findViewById(R.id.tbFazer);
+        setSupportActionBar(tbFazer);
         TextView tvTitulo = findViewById(R.id.tvTitulo);
         TextView tvEnunciado = findViewById(R.id.tvEnunciado);
         TextView tvResolucao = findViewById(R.id.tvResolucao);
@@ -74,9 +79,9 @@ public class FazerActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                tvEnunciado.setText(enunciado);
+                                tvEnunciado.setText(Html.fromHtml(enunciado));
                                 tvTitulo.setText(titulo);
-                                tvResolucao.setText(solucao);
+                                tvResolucao.setText(Html.fromHtml(solucao));
                                 for (int i =0;i<5;i++){
                                     RadioButton radioAltenativa = (RadioButton) rgAlternativas.getChildAt(i);
                                     try {
